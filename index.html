@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007AFF;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    <h1><a href="http://127.0.0.1:5000">Админка</a></h1>
-    <script>
-        // Проверка на основе разрешения экрана
-        var screenWidth = window.screen.width;
-        var isBot = screenWidth < 4800;
-        
-        // Примечание: Это всего лишь примеры, и вам необходимо настроить условия
-        // в соответствии с требованиями вашей системы проверки.
-        
-                
-        if (!isBot) {
-            // Создание кнопки и добавление её на страницу
-            var button = document.createElement('button');
-            button.innerHTML = 'Кнопка';
-            button.onclick = function() {
-                // Действия при клике на кнопку
-                window.location.href = 'http://127.0.0.1:5000';
-            };
-            
-            document.body.appendChild(button);
-        }
-    </script>
+    <h1><a href="http://127.0.0.1:5000" class="button-link">Вход</a></h1>
 </body>
 </html>
