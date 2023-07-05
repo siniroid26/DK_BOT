@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-	<button onclick="window.location.href = 'http://127.0.0.1:5000';">Кнопка</button>
+    <h1><a href="#"></a></h1>
+    <script>
+        // Проверка условий для отображения кнопки
+        var isBot = /* здесь нужно добавить условие проверки системы */;
+        
+        if (!isBot) {
+            // Создание кнопки и добавление её на страницу
+            var button = document.createElement('button');
+            button.innerHTML = 'Кнопка';
+            button.onclick = function() {
+                // Действия при клике на кнопку
+                window.location.href = 'http://127.0.0.1:5000';
+            };
+            
+            document.body.appendChild(button);
+        }
+    </script>
 </body>
 </html>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
