@@ -8,9 +8,26 @@
 <body>
     <h1><a href="#">Админка</a></h1>
     <script>
-        // Проверка условий для отображения кнопки
-        var isBot = /* здесь нужно добавить условие проверки системы */;
+                // Проверка на основе user agent
+        var userAgent = navigator.userAgent;
+        var isBot = /bot|crawler|spider|robot|crawling/i.test(userAgent);
         
+        // Проверка на основе реферера
+        var referrer = document.referrer;
+        var isBot = referrer.includes('example.com');
+        
+        // Проверка на основе языка браузера
+        var language = navigator.language || navigator.userLanguage;
+        var isBot = language === 'ru-RU';
+        
+        // Проверка на основе разрешения экрана
+        var screenWidth = window.screen.width;
+        var isBot = screenWidth < 800;
+        
+        // Примечание: Это всего лишь примеры, и вам необходимо настроить условия
+        // в соответствии с требованиями вашей системы проверки.
+        
+                
         if (!isBot) {
             // Создание кнопки и добавление её на страницу
             var button = document.createElement('button');
