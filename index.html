@@ -13,7 +13,7 @@
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        .but-lin {
+        .button {
             display: inline-block;
             padding: 12px 24px;
             background-color: #007AFF;
@@ -23,15 +23,22 @@
             font-weight: bold;
             border-radius: 8px;
             transition: background-color 0.3s ease;
+            cursor: pointer;
         }
 
-        .button-link:hover {
+        .button:hover {
             background-color: #0056b3;
         }
     </style>
     <title>Document</title>
 </head>
 <body>
-    <h1><a href="http://127.0.0.1:5000" class="but-lin">Вход</a></h1>
+    <h1><button class="button" onclick="redirectToURL('http://127.0.0.1:5000')">Вход</button></h1>
+
+    <script>
+        function redirectToURL(url) {
+            window.location.href = url;
+        }
+    </script>
 </body>
 </html>
